@@ -1,1 +1,88 @@
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Page title styling */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* General section styles */
+.section {
+    border: 1px solid black;
+    padding: 15px;
+    margin: 10px 0;
+    position: relative;
+    text-align: center;
+    background-color: lightgray; /* Neutral background for beginners */
+}
+
+/* Specific section background colors */
+.chicken {
+    background-color: #ffdd99; /* Light Orange */
+}
+
+.beef {
+    background-color: #ff9999; /* Light Red */
+}
+
+.sushi {
+    background-color: #99ff99; /* Light Green */
+}
+
+/* Title styles */
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+/* Desktop layout (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        float: left;
+        width: 32%; /* Equal sections */
+        margin-right: 1%; /* Space between sections */
+    }
+    .section:last-child {
+        margin-right: 0; /* No extra margin on the last section */
+    }
+}
+
+/* Tablet layout (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%; /* Two sections side-by-side */
+        float: left;
+        margin-right: 4%; /* Space between two sections */
+    }
+    .section:nth-child(2) {
+        margin-right: 0; /* Remove right margin for second section */
+    }
+    .section:nth-child(3) {
+        width: 100%; /* Third section spans full width */
+        float: none;
+        margin-top: 10px;
+    }
+}
+
+/* Mobile layout (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+        float: none;
+        margin: 10px 0; /* Spacing between sections */
+    }
+}
